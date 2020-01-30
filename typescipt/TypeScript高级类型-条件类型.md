@@ -143,7 +143,7 @@ type NonNullable<T> = T extends null | undefined ? never : T
 
 条件类型与映射类型的结合经常会被作为考点，常见题型多为设计类型工具方法
 
-> 映射类型相关内容见 [TypeScript高级类型-Partial分析](https://blog.csdn.net/roamingcode/article/details/104111165)
+> 映射类型相关内容见 [TypeScript高级类型-Partial分析](https://github.com/localSummer/blog/blob/master/typescipt/TypeScript%E9%AB%98%E7%BA%A7%E7%B1%BB%E5%9E%8B-Partial.md)
 
 接下来设计一个这样的类型工具`NonFunctionKeys<T>` ，通过使用 `NonFunctionKeys<T>`  得到对象类型 `T` 中非函数的属性名组成的联合类型
 
@@ -168,7 +168,7 @@ type NonFunctionKeys<T> = {
 }[keyof T]
 ```
 
-> 里面设计到的 `keyof`、 `in`、 `T[P]` 可参考  [TypeScript高级类型-Partial分析](https://blog.csdn.net/roamingcode/article/details/104111165)
+> 里面设计到的 `keyof`、 `in`、 `T[P]` 可参考  [TypeScript高级类型-Partial分析](https://github.com/localSummer/blog/blob/master/typescipt/TypeScript%E9%AB%98%E7%BA%A7%E7%B1%BB%E5%9E%8B-Partial.md)
 
 #### 条件类型中的类型推断
 
