@@ -182,13 +182,23 @@ type NonFunctionKeys<T> = {
 type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
 ```
 
-同一类型变量可能有多个位置比如：
+下面的示例演示在**协变位置**上**同一类型变量的多个候选类型**将会被推断为**联合类型**：
 
 ```typescript
 type Foo<T> = T extends { a: infer U, b: infer U } ? U : never;
 type t1 = Foo<{ a: string, b: string }>;  // string
-type t2 = Foo<{ a: string, b: number }>;  // string | number，是不是有点取最小公倍数的意思
+type t2 = Foo<{ a: string, b: number }>;  // string | number
 ```
+
+同样在**逆变位置**上**同一类型变量的多个候选类型**将会被推断为**交叉类型**：
+
+```typescript
+type Bar<T> = T extends { a: (x: infer U) => void, b: (x: infer U) => void } ? U : never;
+type t1 = Bar<{ a: (x: string) => void, b: (x: string) => void }>;  // string
+type t2 = Bar<{ a: (x: string) => void, b: (x: number) => void }>;  // string & number
+```
+
+> [协变与逆变](https://jkchao.github.io/typescript-book-chinese/tips/covarianceAndContravariance.html)
 
 > 注意：`infer` 对于常规类型参数（泛型约束），不能在约束子句中使用 `infer` 声明
 
@@ -254,7 +264,7 @@ type Result = UnionToIntersection<string | number>; // 注意：string & number 
     type UnionToIntersection<U> = ((k: string) => void | (k: number) => void) extends ((k: infer I) => void) ? I : never;
     ```
 
-  - 推断出的 `I` 应该具备 `string 和 number` 的类型，故为交叉类型 `string & number`，而该交叉类型在 `vscode` 中表现为 `never`
+  - 根据 `逆变特性` ，推断出的 `I` 应该具备 `string 和 number` 的类型，故为交叉类型 `string & number`，而该交叉类型在 `vscode` 中表现为 `never`
 
 
 
