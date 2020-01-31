@@ -1,5 +1,5 @@
 ### TypeScript高级类型-条件类型
-
+[TOC]
 > 预备知识：
 >
 > [泛型](http://www.typescriptlang.org/docs/handbook/generics.html)
@@ -32,6 +32,8 @@ let z = f(true)
 ```
 
 在编写函数 `f` 时，只知道返回值的范围，但不知道其具体类型，其具体类型需要等到函数执行时进行确定，换句话说，只有类型系统中给出 `充足的条件` 之后,它才会根据条件推断出类型结果。
+
+----
 
 #### 条件类型是什么及其使用
 
@@ -78,6 +80,8 @@ type Exclude<T, U> = T extends U ? never : T;
 ```
 
 后面文章会逐渐讲解到！
+
+----
 
 #### 分布式条件类型
 
@@ -139,6 +143,8 @@ type NonNullable<T> = T extends null | undefined ? never : T
 
 > 注意：`never` 类型表示不会是任何值，即什么都没有
 
+----
+
 #### 条件类型与映射类型
 
 条件类型与映射类型的结合经常会被作为考点，常见题型多为设计类型工具方法
@@ -169,6 +175,8 @@ type NonFunctionKeys<T> = {
 ```
 
 > 里面设计到的 `keyof`、 `in`、 `T[P]` 可参考  [TypeScript高级类型-Partial分析](https://github.com/localSummer/blog/blob/master/typescipt/TypeScript%E9%AB%98%E7%BA%A7%E7%B1%BB%E5%9E%8B-Partial.md)
+
+----
 
 #### 条件类型中的类型推断
 
