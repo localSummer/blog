@@ -1,5 +1,5 @@
 ### TypeScript高级类型-条件类型
-@[TOC]
+@[toc]
 > 预备知识：
 >
 > [泛型](http://www.typescriptlang.org/docs/handbook/generics.html)
