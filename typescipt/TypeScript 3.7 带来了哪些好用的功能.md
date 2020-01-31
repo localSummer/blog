@@ -1,5 +1,5 @@
 ### TypeScript 3.7 带来了哪些好用的功能
-[TOC]
+@[TOC]
 #### Optional Chining（可选链）
 
 `Optional Chining` 核心点在于它允许我们写出在遇到 `null` 或者 `undefined` 时，能立即停止运行的代码。
