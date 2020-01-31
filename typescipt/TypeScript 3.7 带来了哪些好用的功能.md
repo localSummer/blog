@@ -146,6 +146,49 @@ function blurImage(input, width, height) {
 export function blurImage(input: Uint8Array, width: number, height: number): Uint8Array;
 ```
 
+以上为个人认为在 TypeScript 3.7 中需要重点关注的内容，其他具体内容见 [TypeScript 3.7 更新概览](http://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html)。
+
 ----
 
-以上为个人认为在 TypeScript 3.7 中需要重点关注的内容，其他具体内容见 [TypeScript 3.7 更新概览](http://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html)
+### TypeScript 3.8 中值得关注的功能
+
+1. ECMAScript 私有字段
+
+   - ```javascript
+     class Person {
+         #name: string
+     
+         constructor(name: string) {
+             this.#name = name;
+         }
+     
+         greet() {
+             console.log(`Hello, my name is ${this.#name}!`);
+         }
+     }
+     
+     let jeremy = new Person("Jeremy Bearimy");
+     
+     jeremy.#name
+     //     ~~~~~
+     // Property '#name' is not accessible outside class 'Person'
+     // because it has a private identifier.
+     ```
+
+2. `export * as ns` 语法
+
+   - ```javascript
+     export * as utilities from "./utilities.js";
+     ```
+
+   - 上面代码在 ECMAScript 2020 中被支持，TypeScript 3.8 实现了此语法
+
+3. `Top-Level await`
+
+   - 在当前的 JavaScript 中（以及其他具有相似功能的大多数其他语言），`await` 仅仅只能用于 `async` 函数内部。然而，使用 `top-level await` 时，我们可以在一个模块的顶层使用 `await`。
+
+4. watchOptions 配置监听策略
+
+具体细节见 [TypeScript 3.8 Beta](https://devblogs.microsoft.com/typescript/announcing-typescript-3-8-beta/)
+
+
