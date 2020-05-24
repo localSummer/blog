@@ -126,12 +126,83 @@ import(/* webpackChunkName: "data" */, './data.js').then(() => {});
    3. 懒加载
    4. 提取公共代码
    5. IgnorePlugin
-   6. Scope Hosting
+   6. production 模式
+   7. Scope Hosting
       1. 代码体积更小
       2. 创建函数作用域更是
-   7. Tree-Shaking
+   8. Tree-Shaking
       1. mode=production 自动开启
       2. 必须使用 ES6 module 才能生效，commonjs无效，原因在于 ES6 import 为静态引入，可以进行代码静态分析
+
+### babel-polyfill
+
+1. corejs、regenerator 的集合
+
+2. babel 7.4后弃用 babel-polyfill，推荐直接使用 corejs、regenerator
+
+3. babel 只解析语法，对于新的 API 并不处理、同事也不处理模块化（模块化使用webpack进行处理）
+4. 垫片的按需加载
+
+```json
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": 'usage',
+        "corejs": 3
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      // 不会污染全局变量
+      // 多次使用只会打包一次
+      // 依赖统一按需引入,无重复引入,无多余引入
+      "@babel/plugin-transform-runtime", // 默认配置即可
+      {
+        "absoluteRuntime": false,
+        "corejs": 3,
+        "helpers": true,
+        "regenerator": true, // 避免污染全局域
+        "useEsModules": false,
+        "moduleName": "babel-runtime" // 默认值
+      }
+    ]
+  ]
+}
+```
+
+5. 造成全局环境的污染，@babel/runtime 对 API 名字进行转换，配合 `@babel/plugin-transform-runtime` 使用
+
+### 为何进行打包和构建
+
+1. 体积更小，加载更快
+2. 编译高级语言和语法（TS、ES6+）
+3. 兼容性和错误检查（polyfill、eslint）
+4. 统一高效的研发流程
+5. 统一的构建流程和产出标准
+6. 集成公司构建规范
+
+### loader和plugin的区别
+
+loader模块转换器、plugin扩展插件
+
+### 为何 Proxy 不能被polyfill
+
+class 可以用 function 模拟、Promise 可以被 callback 模拟
+
+Proxy的功能用 Object.defineProperty 无法模拟，对象的属性新增和删除无法被拦截到，数组也无法拦截
+
+
+
+
+
+
+
+
+
+
 
 
 
