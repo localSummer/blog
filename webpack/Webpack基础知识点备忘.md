@@ -140,7 +140,7 @@ import(/* webpackChunkName: "data" */, './data.js').then(() => {});
 
 2. babel 7.4后弃用 babel-polyfill，推荐直接使用 corejs、regenerator
 
-3. babel 只解析语法，对于新的 API 并不处理、同事也不处理模块化（模块化使用webpack进行处理）
+3. babel 只解析语法，对于新的 API 并不处理、同时也不处理模块化（模块化使用webpack进行处理）
 4. 垫片的按需加载
 
 ```json
@@ -156,7 +156,8 @@ import(/* webpackChunkName: "data" */, './data.js').then(() => {});
   ],
   "plugins": [
     [
-      // 不会污染全局变量
+      // babel-runtime 不会污染全局变量，但多次使用会多次打包，所以配合使用 @babel/plugin-transform-runtime
+      // 该插件不会污染全局变量
       // 多次使用只会打包一次
       // 依赖统一按需引入,无重复引入,无多余引入
       "@babel/plugin-transform-runtime", // 默认配置即可
