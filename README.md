@@ -14,3 +14,6 @@
 ### Koa
 1. [常用中间件原理解析](https://github.com/localSummer/blog/blob/master/%E5%B8%B8%E7%94%A8%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%8E%9F%E7%90%86%E6%B5%85%E6%9E%90.md)
 2. [koa2+ts中为Context扩展自定义属性](https://github.com/localSummer/blog/blob/master/koa2%2Bts%E4%B8%AD%E4%B8%BAcontext%E6%89%A9%E5%B1%95%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7.md)
+
+### 随笔
+1. [基于Koa中间件替代前端Promise链式调用](https://github.com/localSummer/blog/blob/master/%E5%9F%BA%E4%BA%8EKoa%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%9B%BF%E4%BB%A3%E5%89%8D%E7%AB%AFPromise%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8.md)
