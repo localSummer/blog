@@ -17,3 +17,6 @@
 
 ### 随笔
 1. [基于Koa中间件替代前端Promise链式调用](https://github.com/localSummer/blog/blob/master/%E5%9F%BA%E4%BA%8EKoa%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%9B%BF%E4%BB%A3%E5%89%8D%E7%AB%AFPromise%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8.md)
+2. [Nodejs提取图片主题色（一）](https://github.com/localSummer/blog/blob/master/Nodejs%E6%8F%90%E5%8F%96%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A2%98%E8%89%B2%EF%BC%88%E4%B8%80%EF%BC%89.md)
+3. [Nodejs提取图片主题色（二）](https://github.com/localSummer/blog/blob/master/Nodejs%E6%8F%90%E5%8F%96%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A2%98%E8%89%B2%EF%BC%88%E4%BA%8C%EF%BC%89.md)
+4. [简易版Promise实现](https://github.com/localSummer/blog/blob/master/%E7%AE%80%E6%98%93%E7%89%88Promise%E5%AE%9E%E7%8E%B0.md)
