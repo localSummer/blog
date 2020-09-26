@@ -7,6 +7,7 @@
 5. [TypeScript高级类型-内置实用工具类型](https://github.com/localSummer/blog/blob/master/typescipt/TypeScript%E9%AB%98%E7%BA%A7%E7%B1%BB%E5%9E%8B-%E5%86%85%E7%BD%AE%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%9E%8B.md)
 6. [TypeScript-易混淆点解读](https://github.com/localSummer/blog/blob/master/typescipt/TypeScript-%E6%98%93%E6%B7%B7%E6%B7%86%E7%82%B9%E8%A7%A3%E8%AF%BB.md)
 7. [TypeScript-工具类型的设计](https://github.com/localSummer/blog/blob/master/typescipt/TypeScript-%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%AE%BE%E8%AE%A1.md)
+8. [TypeScript-注意点](https://github.com/localSummer/blog/blob/master/typescipt/typescript-%E6%B3%A8%E6%84%8F%E7%82%B9.md)
 
 ### Webpack
 1. [webpack基础点备忘](https://github.com/localSummer/blog/blob/master/webpack/Webpack%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9%E5%A4%87%E5%BF%98.md)
