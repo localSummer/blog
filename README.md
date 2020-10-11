@@ -23,3 +23,7 @@
 ### nodejs
 1. [Nodejs提取图片主题色（一）](https://github.com/localSummer/blog/blob/master/Nodejs%E6%8F%90%E5%8F%96%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A2%98%E8%89%B2%EF%BC%88%E4%B8%80%EF%BC%89.md)
 2. [Nodejs提取图片主题色（二）](https://github.com/localSummer/blog/blob/master/Nodejs%E6%8F%90%E5%8F%96%E5%9B%BE%E7%89%87%E4%B8%BB%E9%A2%98%E8%89%B2%EF%BC%88%E4%BA%8C%EF%BC%89.md)
+
+### jest
+1. [Jest基础入门](https://github.com/localSummer/blog/blob/master/jest/Jest%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8.md)
+2. [Jest难点进阶](https://github.com/localSummer/blog/blob/master/jest/Jest%E9%9A%BE%E7%82%B9%E8%BF%9B%E9%98%B6.md)

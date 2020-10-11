@@ -55,7 +55,7 @@ optimization: {
     cacheGroups: { // 缓存分组
       // 第三方模块
       vendor: {
-        name: 'vendeor', // 抽离的chunk名称
+        name: 'vendor', // 抽离的chunk名称
         priority: 1, // 命中多个缓存组配置，则比较抽离的优先级
         test: /node_modules/,
         minSize: 0, // 小于 minSize 则不再进行抽离
