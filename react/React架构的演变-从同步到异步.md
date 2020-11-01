@@ -423,7 +423,7 @@ React 16 引入的 Fiber 架构，就是为了后续的异步渲染能力做铺�
 >
 > -- by 司徒正美 [《React Fiber架构》](https://zhuanlan.zhihu.com/p/37095662)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201101200814601.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3JvYW1pbmdjb2Rl,size_16,color_FFFFFF,t_70#pic_center)
+![images/concurrent](https://img-blog.csdnimg.cn/20201101200814601.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3JvYW1pbmdjb2Rl,size_16,color_FFFFFF,t_70#pic_center)
 
 ### 如何使用
 
@@ -661,11 +661,11 @@ export default App
 
 先看看同步模式下：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020110120070773.gif#pic_center)
+![images/sync](https://img-blog.csdnimg.cn/2020110120070773.gif#pic_center)
 
 再看看异步模式下：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201101200724168.gif#pic_center)
+![images/async](https://img-blog.csdnimg.cn/20201101200724168.gif#pic_center)
 
 最后 setState 的次数是 81 次，表明这里的操作在 81 个时间片下进行的，每个时间片更新了一次，同一个时间片中的 setState 会进行合并。
 
