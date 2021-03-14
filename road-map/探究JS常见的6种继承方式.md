@@ -175,6 +175,7 @@ function clone(original) {
   clone.getFriends = function () {
     return this.friends
   }
+  return clone
 }
 
 let person = clone(parent5)

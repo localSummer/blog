@@ -5,9 +5,9 @@ Node.js的events 模块对外提供了一个 EventEmitter 对象，用于对 Nod
 #### 基本使用
 
 ```javascript
-var events = require('events');
+let events = require('events');
 
-var eventEmitter = new events.EventEmitter();
+let eventEmitter = new events.EventEmitter();
 
 eventEmitter.on('say',function(name){
     console.log('Hello',name);
@@ -85,7 +85,7 @@ class EventEmitter {
 再看下 once 方法和 allOff的实现
 
 ```javascript
-// 直接调用 on 方法，once 参数传入 true，待执行之后进行 once 处理
+	// 直接调用 on 方法，once 参数传入 true，待执行之后进行 once 处理
   once(eventName, listener) {
     return this.on(eventName, listener, true)
   }
